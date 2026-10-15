@@ -18,8 +18,9 @@ public class PayrollApp {
 
         myScanner.nextLine();
 
-        System.out.println("your gross pay is: " + (hourlyRate * hoursWorked));
-
+        if(hoursWorked > 40) {
+            System.out.println("your gross pay is: " + ((hourlyRate * 1.5)* hoursWorked));
+        } else System.out.println("your gross pay is: " + (hourlyRate * hoursWorked));
 
 
 
