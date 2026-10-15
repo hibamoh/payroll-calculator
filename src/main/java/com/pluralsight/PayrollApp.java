@@ -18,6 +18,9 @@ public class PayrollApp {
 
         myScanner.nextLine();
 
+        System.out.println("your gross pay is: " + (hourlyRate * hoursWorked));
+
+
 
 
 
