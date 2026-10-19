@@ -5,10 +5,8 @@ public class PayrollApp {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
 
-        System.out.println("please enter your name: ");
-        String name = myScanner.nextLine();
+        String name = getName(myScanner);
 
-        System.out.println("enter the amount of hours you worked: ");
         float hoursWorked = myScanner.nextFloat();
 
         myScanner.nextLine();
@@ -18,14 +16,21 @@ public class PayrollApp {
 
         myScanner.nextLine();
 
-        if(hoursWorked > 40) {
-            System.out.println("your gross pay is: " + ((hourlyRate * 1.5)* hoursWorked));
+        if (hoursWorked > 40) {
+            System.out.println("your gross pay is: " + ((hourlyRate * 1.5) * hoursWorked));
         } else System.out.println("your gross pay is: " + (hourlyRate * hoursWorked));
+    }
 
-
-
-
+        public static String getName(Scanner myScanner){
+            System.out.println("please enter your name");
+             return myScanner.nextLine();
+        }
+        public static float getHoursWorked(Scanner myScanner){
+            System.out.println("how many hours did you work?");
+            return myScanner.nextFloat();
+        }
 
 
     }
-}
+
+
