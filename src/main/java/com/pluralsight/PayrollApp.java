@@ -18,6 +18,13 @@ public class PayrollApp {
         double grossPay = calculateGrossPay(hoursWorked, payRate);
 
         double overTimePay = calculateOvertime(hoursWorked, payRate);
+
+        System.out.println("Employee name: " + name);
+        System.out.println("Hours worked: " + hoursWorked);
+        System.out.printf("Hourly rate: $%.2f%n", payRate);
+        System.out.printf("Overtime pay: $%.2f%n", overTimePay);
+        System.out.printf("Gross pay: $%.2f%n", grossPay);
+
     }
 
     public static String getName(Scanner inputScanner) {
@@ -26,7 +33,7 @@ public class PayrollApp {
         return name;
     }
 
-    public static double getHoursWorked(Scanner inputScanner) {
+    public static int getHoursWorked(Scanner inputScanner) {
         System.out.println("how many hours did you work?");
         String userInput = inputScanner.nextLine();
 
@@ -54,7 +61,7 @@ public class PayrollApp {
             double otPay = (otHours * otPayRate);
             return otPay;
         }
-
-
+        return 0;
     }
-}
+    }
+
